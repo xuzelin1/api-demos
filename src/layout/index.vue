@@ -52,8 +52,7 @@ export default defineComponent({
     }
 
     .m-app-main {
-      padding: 20px;
-      overflow-y: scroll;
+      overflow: hidden;
       flex: 1;
     }
   }

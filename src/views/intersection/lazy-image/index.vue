@@ -17,11 +17,11 @@
 </template>
 
 <script lang="ts">
-import observer from '../../utils/img-load';
+import observer from '@/utils/img-load';
 import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
-  name: 'intersection',
+  name: 'lazyImage',
   setup() {
     const lazyImageList = [
       'https://game.gtimg.cn/images/lol/act/img/skin/big121000.jpg',

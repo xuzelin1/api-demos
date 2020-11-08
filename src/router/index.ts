@@ -9,16 +9,25 @@ export const routes = [
       parent: '简介',
       title: 'Index',
     },
-    component: import('@/components/HelloWorld.vue')
+    component: () => import('@/components/HelloWorld.vue')
   },
   {
-    path: '/intersection',
-    name: 'intersection',
+    path: '/lazy-image',
+    name: 'lazyImage',
     meta: {
       parent: 'Intersection',
       title: '图片懒加载',
     },
-    component: import('@/views/intersection'),
+    component: () => import('@/views/intersection/lazy-image'),
+  },
+  {
+    path: '/virtual-list',
+    name: 'virtualList',
+    meta: {
+      parent: 'Intersection',
+      title: '虚拟列表',
+    },
+    component: () => import('@/views/intersection/virtual-list'),
   },
 ]
 

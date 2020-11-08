@@ -6,7 +6,6 @@ const options = {
 
 const callback = function(entries: any[], observer: any) {
 	entries.forEach((entry: any) => {
-		console.log(entry);
 		if (entry.intersectionRatio >= 0.3) {
 			setTimeout(() => {
 				entry.target.src = entry.target.dataset.src;
