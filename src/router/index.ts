@@ -24,10 +24,17 @@ export const routes = [
     path: '/virtual-list',
     name: 'virtualList',
     meta: {
-      parent: 'Intersection',
       title: '虚拟列表',
     },
     component: () => import('@/views/intersection/virtual-list'),
+  },
+  {
+    path: '/virtual-list',
+    name: 'virtualList',
+    meta: {
+      title: '页内导航',
+    },
+    component: () => import('@/views/intersection/active-tab'),
   },
 ]
 
