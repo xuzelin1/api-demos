@@ -29,13 +29,21 @@ export const routes = [
     component: () => import('@/views/intersection/scroll-list'),
   },
   {
-    path: '/virtual-list',
-    name: 'virtualList',
+    path: '/transition',
+    name: 'transition',
     meta: {
-      title: '虚拟列表',
+      title: '动画加载',
     },
-    component: () => import('@/views/intersection/virtual-list'),
+    component: () => import('@/views/intersection/transition'),
   },
+  // {
+  //   path: '/virtual-list',
+  //   name: 'virtualList',
+  //   meta: {
+  //     title: '虚拟列表',
+  //   },
+  //   component: () => import('@/views/intersection/virtual-list'),
+  // },
   // {
   //   path: '/virtual-list',
   //   name: 'virtualList',
