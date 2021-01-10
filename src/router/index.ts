@@ -28,14 +28,14 @@ export const routes = [
     },
     component: () => import('@/views/intersection/virtual-list'),
   },
-  {
-    path: '/virtual-list',
-    name: 'virtualList',
-    meta: {
-      title: '页内导航',
-    },
-    component: () => import('@/views/intersection/active-tab'),
-  },
+  // {
+  //   path: '/virtual-list',
+  //   name: 'virtualList',
+  //   meta: {
+  //     title: '页内导航',
+  //   },
+  //   component: () => import('@/views/intersection/active-tab'),
+  // },
 ]
 
 const router = createRouter({

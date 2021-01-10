@@ -46,6 +46,10 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.m-intersection-demo {
+  overflow-y: scroll;
+  height: 100%;
+}
   #test {
     background-color: violet;
     width: 200px;
