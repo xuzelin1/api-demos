@@ -21,6 +21,14 @@ export const routes = [
     component: () => import('@/views/intersection/lazy-image'),
   },
   {
+    path: '/scroll-list',
+    name: 'scrollList',
+    meta: {
+      title: '无限滚动',
+    },
+    component: () => import('@/views/intersection/scroll-list'),
+  },
+  {
     path: '/virtual-list',
     name: 'virtualList',
     meta: {
