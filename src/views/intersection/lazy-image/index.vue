@@ -7,8 +7,8 @@
     >
       <img
         class="lazy-image"
-        width=1240
-        height=632
+        width=620
+        height=316
         :data-src="lazy"
         alt=""
       >
