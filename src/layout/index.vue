@@ -34,7 +34,7 @@ export default defineComponent({
     width: 100vw;
     .m-layout-menu {
       width: 250px;
-      border-right: 4px solid #44d2d4;
+      border-right: 4px solid #35495e;
     }
     h1 {
       font-size: 18px;

@@ -52,6 +52,15 @@ export const routes = [
   //   },
   //   component: () => import('@/views/intersection/active-tab'),
   // },
+  {
+    path: '/data-attribute',
+    name: 'dataAttribute',
+    meta: {
+      parent: 'data- Attributes',
+      title: 'data- Attributes',
+    },
+    component: () => import('@/views/data-*/index.vue'),
+  },
 ]
 
 const router = createRouter({
