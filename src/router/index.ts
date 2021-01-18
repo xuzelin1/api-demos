@@ -59,7 +59,7 @@ export const routes = [
       parent: 'data- Attributes',
       title: 'data- Attributes',
     },
-    component: () => import('@/views/data-*/index.vue'),
+    component: () => import('@/views/data-attribute/index.vue'),
   },
 ]
 
