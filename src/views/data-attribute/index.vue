@@ -18,10 +18,10 @@
       <p class="u-introduction-tips">当表单验证失败时，自动滚动并聚焦到第一个必填或错误的表单项</p>
       <div>
         <el-form :model="ruleForm" :rules="rules" ref="formName" label-width="100px" class="demo-ruleForm">
-          <el-form-item data-ref="name" label="姓名" prop="name">
-            <el-input ref="name" v-model="ruleForm.name"></el-input>
+          <el-form-item data-id="name" label="姓名" prop="name">
+            <el-input id="name" v-model="ruleForm.name"></el-input>
           </el-form-item>
-          <el-form-item data-ref="age" label="年龄" prop="age">
+          <el-form-item data-id="age" label="年龄" prop="age">
             <el-input v-model="ruleForm.age"></el-input>
           </el-form-item>
           <el-form-item>
@@ -48,8 +48,7 @@ export default defineComponent({
     const moreContent = 'Mouse hover to display content: more content,more content,more content,more content,more content,more content,more content,more content,more content,more content';
 
     const formName = ref<HTMLElement | null>(null);
-    const name = ref<HTMLElement | null>(null);
-    const age = ref<HTMLElement | null>(null);
+
     const ruleForm = {
       name: '',
       age: '',
@@ -71,9 +70,11 @@ export default defineComponent({
         } else {
           await nextTick();          
           const errorFormList = document.querySelectorAll('.el-form-item.is-error');
-          console.log(errorFormList);
           const first = errorFormList[0];
           first.scrollIntoView();
+          const id = first.getAttribute('data-id');
+          const formItem = document.getElementById(id as string);
+          formItem?.focus();
           return false;
         }
       });
@@ -90,8 +91,6 @@ export default defineComponent({
       resetForm,
       submitForm,
       formName,
-      name,
-      age,
     }
   },
 })
