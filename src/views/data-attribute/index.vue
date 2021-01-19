@@ -1,12 +1,24 @@
 <template>
   <div class="data-attribute-page">
     <section class="demo-item">
-      <h2>1. ToolTip</h2>
+      <h2>ToolTip</h2>
       <div class="tool-tip-content" :data-content="moreContent">{{ tooltipContent }}</div>
     </section>
 
     <section class="demo-item">
-      <h2>2. lazy image</h2>
+      <h2>Css style - button</h2>
+      <div class="css-style-panel">
+        <div data-type="error">Error</div>
+        <div data-type="warning">Warning</div>
+        <div data-type="primary">Primary</div>
+        <div data-type="default">Default</div>
+        <div data-type="info">Info</div>
+        <div data-type="success">Success</div>
+      </div>
+    </section>
+
+    <section class="demo-item">
+      <h2>lazy image</h2>
       <p class="u-introduction-tips">使用 data-src 存储真正的图片地址，展示的时候，img 标签中的 src 替换成 data-src 中存储的值</p>
       <div class="lazy-image-panel">
         <LazyImage />
@@ -14,7 +26,7 @@
     </section>
 
     <section class="demo-item">
-      <h2>3. Form validate auto focus</h2>
+      <h2>Form validate auto focus</h2>
       <p class="u-introduction-tips">当表单验证失败时，自动滚动并聚焦到第一个必填或错误的表单项</p>
       <div class="auto-focus-form-panel">
         <el-form :model="ruleForm" :rules="rules" ref="formName" label-width="100px" class="demo-ruleForm">
@@ -166,7 +178,7 @@ export default defineComponent({
 <style lang="scss" scoped>
   .data-attribute-page {
     overflow-y: scroll;
-    height: 100vh;
+    height: calc(100vh - 48px);
     padding: 24px 0;
     h2 {
       font-size: 24px;
@@ -196,6 +208,38 @@ export default defineComponent({
         height: 12px;
         background: #41b883;
       }
+    }
+  }
+
+  .css-style-panel {
+    & > div {
+      display: inline-block;
+      margin-right: 16px;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      width: fit-content;
+      font-weight: bold;
+    }
+    [data-type*="error"] {
+      background-color: #f1203c;
+    }
+    [data-type*="warning"] {
+      background-color: #f39f14;
+    }
+    [data-type*="primary"] {
+      background-color: #eb4428;
+    }
+    [data-type*="default"] {
+      background-color: #ffffff;
+      color: #000;
+      border: 1px solid #e9eef2;
+    }
+    [data-type*="info"] {
+      background-color: #2c69f6;
+    }
+    [data-type*="success"] {
+      background-color: #1abc56;
     }
   }
 
