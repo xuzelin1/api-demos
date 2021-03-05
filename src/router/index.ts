@@ -61,6 +61,15 @@ export const routes = [
     },
     component: () => import('@/views/data-attribute/index.vue'),
   },
+  {
+    path: '/css-flex',
+    name: 'cssFlex',
+    meta: {
+      parent: 'CSS',
+      title: 'Flex - 动画',
+    },
+    component: () => import('@/views/css-pages/flex-items.vue'),
+  },
 ]
 
 const router = createRouter({
