@@ -70,6 +70,14 @@ export const routes = [
     },
     component: () => import('@/views/css-pages/flex-items.vue'),
   },
+  {
+    path: '/beer-slider',
+    name: 'beerSlider',
+    meta: {
+      title: 'Beer Slider',
+    },
+    component: () => import('@/views/css-pages/beer-slider.vue'),
+  },
 ]
 
 const router = createRouter({
